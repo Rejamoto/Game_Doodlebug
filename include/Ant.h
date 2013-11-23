@@ -9,11 +9,17 @@ class Ant : private Organism
 {
     public:
         Ant();
-        Ant(const Point& point);
+        Ant(Point* point);
+        Ant(Point* point, MoveBehavior* mb);
+
         int getAntType() const;
+
         Point getAntLocation() const;
+        Point* getLocation() const;
+
         bool isBreeding();
-        void moving();
+
+        void movingAnt(TheGrid::GameBoard& gb, Point* p);
         void moving(const Point& newLocation);
 
         void setAntMovement(MoveRandom* mb);

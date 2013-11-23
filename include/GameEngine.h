@@ -5,7 +5,7 @@
 #include "Ant.h"
 #include "Doodlebug.h"
 
-namespace
+namespace GameFunctions
 {
     bool checkIfEmptySides(const int& type, const Point& point);
     Point getOneSidePoint(const int& type, const Point& point, const int& side);
@@ -26,6 +26,7 @@ namespace DoodlebugGame
         public:
             GameEngine();
             GameEngine(int gridSize);
+
             void runGame();
     };
 }

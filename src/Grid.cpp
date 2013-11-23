@@ -167,7 +167,7 @@ namespace
             }
 
             grid[xTemp][yTemp] = 1;
-            listOfDoodlebugs.push_back(Doodlebug(Point(xTemp, yTemp)));
+            listOfDoodlebugs.push_back(Doodlebug(new Point(xTemp, yTemp)));
         }
 
         for(int i = 0; i < amountAnts; i++){        // Generate Ants in empty blocks
@@ -180,7 +180,7 @@ namespace
             }
 
             grid[xTemp][yTemp] = 2;
-            listOfAnts.push_back(Ant(Point(xTemp, yTemp)));
+            listOfAnts.push_back(Ant(new Point(xTemp, yTemp)));
         }
     }
     // End of spawnInOrganisms function
@@ -198,18 +198,18 @@ namespace
             while(checks[randomNum] && (checks[0] == false || checks[1] == false || checks[2] == false || checks[3] == false))      // Loops till it find Number that was not selected before
                 randomNum = generate() % 4;
 
-            Point tempPoint = getOneSidePoint(breedType, point, randomNum);     // Gets the new point for the Organism to spawn in
+            Point* tempPoint = new Point(getOneSidePoint(breedType, point, randomNum));     // Gets the new point for the Organism to spawn in
 
-            if(checkMovementIsValid(breedType, tempPoint)){     // If location is valid, spawn Organism to new location
-                if(breedType == 1 && grid[tempPoint.getX()][tempPoint.getY()] == 2)     // Remove Ant if Doodlebug spawns on same location
-                    removeFromList(2, tempPoint);
+            if(checkMovementIsValid(breedType, *tempPoint)){     // If location is valid, spawn Organism to new location
+                if(breedType == 1 && grid[tempPoint->getX()][tempPoint->getY()] == 2)     // Remove Ant if Doodlebug spawns on same location
+                    removeFromList(2, *tempPoint);
 
                 if(breedType == 1)      // Adds new Doodlebug/Ant to list
                     listOfDoodlebugs.push_back(Doodlebug(tempPoint));
                 else if(breedType == 2)
                     listOfAnts.push_back(Ant(tempPoint));
 
-                grid[tempPoint.getX()][tempPoint.getY()] = breedType;       // Set Organism on Grid
+                grid[tempPoint->getX()][tempPoint->getY()] = breedType;       // Set Organism on Grid
                 break;
             }
             else

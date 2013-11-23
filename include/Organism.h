@@ -3,19 +3,20 @@
 
 #include "point.h"
 #include "MoveBehavior.h"
-
-
+#include "GameBoard.h"
 
 class Organism
 {
     public:
         Organism();
-        Organism(int type, int timeTillBreed, Point point);
-        virtual ~Organism();
+        Organism(int type, int timeTillBreed, Point* point);
+        Organism(int type, int timeTillBreed, Point* point, MoveBehavior* mb);
 
         bool breeding() const;
         int getType() const;
+
         Point getPoint() const;
+        Point* getPointer() const;
 
         void setType(int type);
         void setPoint(const Point& point);
@@ -23,10 +24,10 @@ class Organism
         void breedTurn();
 
         void setMovement(MoveBehavior* mb);
-        void movingOrganism();
+        void movingOrganism(TheGrid::GameBoard& gb, Point* p);
     private:
         int type, breedPoints, breedTime;
-        Point point;
+        Point* point;
         MoveBehavior* movement;
 };
 

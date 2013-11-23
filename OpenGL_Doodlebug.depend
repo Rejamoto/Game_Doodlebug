@@ -1,0 +1,122 @@
+# depslib dependency file v1.0
+1385190705 source:x:\programming\c++\opengl\opengl_doodlebug\main.cpp
+	<windows.h>
+	<gl/gl.h>
+	<vector>
+	<algorithm>
+	<chrono>
+	<pthread.h>
+	<mutex>
+	"include/GameInfo.h"
+	"include/GameEngine.h"
+	"include/MoveRandom.h"
+	"include/SeekAnt.h"
+
+1375194143 source:x:\programming\c++\opengl\opengl_doodlebug\src\ant.cpp
+	"../include/Ant.h"
+	"../include/MoveRandom.h"
+
+1374931354 x:\programming\c++\opengl\opengl_doodlebug\include\ant.h
+	"Organism.h"
+	"OrganismInfo.h"
+	"MoveRandom.h"
+
+1374931316 x:\programming\c++\opengl\opengl_doodlebug\include\organism.h
+	"point.h"
+	"MoveBehavior.h"
+	"GameBoard.h"
+
+1370839016 x:\programming\c++\opengl\opengl_doodlebug\include\point.h
+
+1374944056 x:\programming\c++\opengl\opengl_doodlebug\include\movebehavior.h
+	"GameBoard.h"
+	"Point.h"
+
+1385167430 x:\programming\c++\opengl\opengl_doodlebug\include\gameboard.h
+	<iostream>
+	"Point.h"
+	"windows.h"
+
+1372530785 x:\programming\c++\opengl\opengl_doodlebug\include\organisminfo.h
+
+1374943363 x:\programming\c++\opengl\opengl_doodlebug\include\moverandom.h
+	"MoveBehavior.h"
+	"Point.h"
+	"GameBoard.h"
+
+1374931373 source:x:\programming\c++\opengl\opengl_doodlebug\src\doodlebug.cpp
+	"../include/Doodlebug.h"
+	"../include/MoveRandom.h"
+
+1375194143 x:\programming\c++\opengl\opengl_doodlebug\include\doodlebug.h
+	"Organism.h"
+	"OrganismInfo.h"
+	"MoveRandom.h"
+
+1385167212 source:x:\programming\c++\opengl\opengl_doodlebug\src\gameboard.cpp
+	"../include/GameBoard.h"
+
+1375197459 source:x:\programming\c++\opengl\opengl_doodlebug\src\gameengine.cpp
+	"../include/GameEngine.h"
+	<vector>
+	<algorithm>
+	<chrono>
+	"../include/MoveRandom.h"
+	"../include/SeekAnt.h"
+
+1375027296 x:\programming\c++\opengl\opengl_doodlebug\include\gameengine.h
+	"GameBoard.h"
+	"Ant.h"
+	"Doodlebug.h"
+
+1374947205 x:\programming\c++\opengl\opengl_doodlebug\include\seekant.h
+	"MoveBehavior.h"
+	"GameBoard.h"
+	"Point.h"
+
+1374768103 source:x:\programming\c++\opengl\opengl_doodlebug\src\grid.cpp
+	"../include/Grid.h"
+
+1372534632 x:\programming\c++\opengl\opengl_doodlebug\include\grid.h
+	<iostream>
+	<vector>
+	<random>
+	<chrono>
+	"Doodlebug.h"
+	"Ant.h"
+	"Point.h"
+	"windows.h"
+
+1375187141 source:x:\programming\c++\opengl\opengl_doodlebug\src\moverandom.cpp
+	<iostream>
+	"../include/MoveRandom.h"
+	"MoveBehavior.cpp"
+	<algorithm>
+	<chrono>
+
+1378781472 x:\programming\c++\opengl\opengl_doodlebug\src\movebehavior.cpp
+	"../include/MoveBehavior.h"
+	"../include/OrganismInfo.h"
+	<algorithm>
+	<chrono>
+
+1374938749 source:x:\programming\c++\opengl\opengl_doodlebug\src\organism.cpp
+	"../include/Organism.h"
+	"../include/MoveRandom.h"
+
+1370839311 source:x:\programming\c++\opengl\opengl_doodlebug\src\point.cpp
+	"../include/Point.h"
+
+1375191877 source:x:\programming\c++\opengl\opengl_doodlebug\src\seekant.cpp
+	"../include/SeekAnt.h"
+	"../include/OrganismInfo.h"
+	"MoveBehavior.cpp"
+
+1378781472 source:x:\programming\c++\opengl\opengl_doodlebug\src\movebehavior.cpp
+	"../include/MoveBehavior.h"
+	"../include/OrganismInfo.h"
+	<algorithm>
+	<chrono>
+
+1378784182 x:\programming\c++\opengl\opengl_doodlebug\include\gameinfo.h
+

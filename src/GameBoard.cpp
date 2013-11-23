@@ -8,6 +8,7 @@ namespace TheGrid
         grid = new int*[x];
         for(int i = 0; i < x; i++)
             grid[i] = new int[y];
+
         for(int i = 0; i < x; i++)
             for(int j = 0; j < y; j++)
                 grid[i][j] = 0;
@@ -17,6 +18,7 @@ namespace TheGrid
     int GameBoard::getGridBlock(const int _x, const int _y) const { return grid[_x][_y]; }
     int GameBoard::getGrid_X() const { return x; }
     int GameBoard::getGrid_Y() const { return y; }
+    int** GameBoard::getGridArray() const { return grid; }
 
     void GameBoard::setGridBlock(const int _x, const int _y, const int type) { grid[_x][_y] = type; }
 
@@ -34,11 +36,15 @@ namespace TheGrid
         grid = new int*[x];
         for(int i = 0; i < x; i++)
             grid[i] = new int[y];
+
         for(int i = 0; i < x; i++)
             for(int j = 0; j < y; j++)
                 grid[i][j] = 0;
     }
 
+    int GameBoard::operator()(Point* point){
+        return grid[point->getX()][point->getY()];
+    }
     int GameBoard::operator()(const int _x, const int _y) const {
         return grid[_x][_y];
     }
